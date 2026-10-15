@@ -1,0 +1,31 @@
+/* Ukrywanie: display:none nie zostawia pustego miejsca (w przeciwieństwie do visibility:hidden)
+   i nie rusza drzewa DOM zarządzanego przez Reacta Facebooka. */
+html.fbclean-hide-ad [data-fbclean~="ad"],
+html.fbclean-hide-ai [data-fbclean~="ai"],
+html.fbclean-hide-follow [data-fbclean~="follow"],
+html.fbclean-hide-join [data-fbclean~="join"],
+html.fbclean-hide-suggested [data-fbclean~="suggested"] {
+  display: none !important;
+}
+
+/* Tryb podglądu: zamiast ukrywać, obrysowuje i podpisuje wykryte elementy */
+html.fbclean-debug [data-fbclean] {
+  outline: 3px dashed #e5484d !important;
+  outline-offset: -3px;
+  opacity: 0.45;
+  position: relative;
+}
+
+html.fbclean-debug [data-fbclean]::before {
+  content: "FB Cleaner → " attr(data-fbclean);
+  position: absolute;
+  z-index: 10;
+  top: 6px;
+  left: 6px;
+  background: #e5484d;
+  color: #fff;
+  font: 600 12px/1.6 system-ui, sans-serif;
+  padding: 0 6px;
+  border-radius: 4px;
+  pointer-events: none;
+}
