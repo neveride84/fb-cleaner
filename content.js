@@ -324,7 +324,7 @@
         const reasons = classify(unit, inFeed);
         if (reasons.length) flag(unit, reasons);
       } catch (e) {
-        if (settings.debug) console.warn('[FB Cleaner]', e);
+        if (settings.debug) console.warn('[Feed Cleaner]', e);
       }
     }
     try { scanRightRail(); } catch (_) { /* ignoruj */ }

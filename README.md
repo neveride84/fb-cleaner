@@ -1,4 +1,4 @@
-# FB Cleaner
+# Feed Cleaner for Facebook
 
 A Chrome extension (Manifest V3) that hides the following on facebook.com:
 - **Ads** – sponsored posts and the ad block in the right-hand column,
@@ -10,12 +10,12 @@ A Chrome extension (Manifest V3) that hides the following on facebook.com:
 Each category can be switched on or off in the extension popup, which also shows how many items were hidden on the current page.
 
 ## Installation
-1. Unpack the ZIP (or use the project folder directly).
+1. Install from the Chrome Web Store, or for development: unpack the ZIP (or use the project folder directly).
 2. Go to `chrome://extensions` and turn on **Developer mode**.
 3. Click **Load unpacked** and select the extension folder.
 4. Refresh Facebook.
 
-After changing any file, click the reload icon next to FB Cleaner in `chrome://extensions` and refresh the Facebook tab.
+After changing any file, click the reload icon next to Feed Cleaner in `chrome://extensions` and refresh the Facebook tab.
 
 ## How it works
 - A `MutationObserver` plus a scroll listener (throttled to 250 ms) catch posts that Facebook loads dynamically.
@@ -31,3 +31,6 @@ Instead of hiding detected items, preview mode outlines them in red with a categ
 - Facebook changes its DOM structure regularly, so the heuristics may need updating.
 - Only content that Meta has **labelled** as AI is detected. Unlabelled AI content can't be reliably recognised from the DOM alone.
 - The label dictionaries cover English and Polish (plus a few other languages for "Sponsored"). Add phrases in `content.js` if needed.
+
+## Disclaimer
+Feed Cleaner is an independent project and is not affiliated with, endorsed by, or sponsored by Meta Platforms, Inc. Facebook is a trademark of Meta Platforms, Inc.

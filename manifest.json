@@ -1,8 +1,8 @@
 {
   "manifest_version": 3,
-  "name": "FB Cleaner – no ads, AI or suggestions",
+  "name": "Feed Cleaner for Facebook",
   "version": "1.2.0",
-  "description": "Hides sponsored posts, ads, AI-labelled content, and Follow/Join suggestions from Pages and groups you don't follow on Facebook.",
+  "description": "Hides sponsored posts, AI-labelled content, and Follow/Join suggestions in your Facebook feed. Not affiliated with Meta.",
   "permissions": [
     "storage"
   ],
@@ -21,7 +21,7 @@
     }
   ],
   "action": {
-    "default_title": "FB Cleaner",
+    "default_title": "Feed Cleaner",
     "default_popup": "popup.html",
     "default_icon": {
       "16": "icons/icon16.png",
@@ -34,5 +34,6 @@
     "32": "icons/icon32.png",
     "48": "icons/icon48.png",
     "128": "icons/icon128.png"
-  }
+  },
+  "short_name": "Feed Cleaner"
 }

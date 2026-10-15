@@ -17,7 +17,7 @@ html.fbclean-debug [data-fbclean] {
 }
 
 html.fbclean-debug [data-fbclean]::before {
-  content: "FB Cleaner → " attr(data-fbclean);
+  content: "Feed Cleaner → " attr(data-fbclean);
   position: absolute;
   z-index: 10;
   top: 6px;
